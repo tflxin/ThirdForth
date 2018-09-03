@@ -4,6 +4,9 @@ import java.util.Date;
 
 /**
  * Created by rainday on 2018/6/30.
+ 新闻资讯字段----数据库字段的设计
+ title link id image likCount commentCount
+ createDate ueserId
  */
 public class News {
 
