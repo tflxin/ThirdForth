@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.*;
 
 /**
  * Created by nowcoder on 2018/7/2.
+ 对user表操作数据库（在application里面配置连接信息）
+ addUser(User user) selectById(int id) selectByName(String name)
+ updatePassword(User user) deleteById(int id)
  */
 @Mapper
 public interface UserDAO {
