@@ -2,6 +2,8 @@ package com.nowcoder.model;
 
 /**
  * Created by nowcoder on 2018/6/26.
+ 用户字段----数据库字段的设计
+ nane password saltheadUrl
  */
 public class User {
     private int id;
