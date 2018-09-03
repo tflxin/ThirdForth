@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.*;
 
 /**
  * Created by nowcoder on 2018/7/2.
+ login_ticket操作：登录时：插入addTicket(LoginTicket ticket)
+ ，查询selectByTicket(String ticket)
+ ，更新updateStatus(@Param("ticket") String ticket, @Param("status") int status)
  */
 @Mapper
 public interface LoginTicketDAO {
