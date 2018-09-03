@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by nowcoder on 2019/7/2.
+ 获得userId的最新limit条新闻资讯
  */
 @Service
 public class NewsService {
