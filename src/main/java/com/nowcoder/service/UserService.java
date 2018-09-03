@@ -15,6 +15,16 @@ import java.util.*;
 
 /**
  * Created by nowcoder on 2018/7/2.
+ * 用户注册，登录（通行证），getUser，loginOut操作：
+ * register注册验证：logger日志信息：map存储信息
+ *     StringUtils：user，password：不能为空
+ *     userDAO.selectByName：查用户名存在与否
+ *     不存在：是指user属性（user表中参数实例化：UUID.randomUUID()）
+ *     userDao.addUser(user)
+ *login（判断用户名密码都正确了，这时候我给你一个登录通行证，
+ *       （设置loginTicket中的属性）然后=loginTicketDAO.addTicket(ticket)=并以此得到ticket;
+ *getUser
+ * loginout
  */
 @Service
 public class UserService {
@@ -27,6 +37,8 @@ public class UserService {
 
     public Map<String, Object> register(String username, String password) {
         Map<String, Object> map = new HashMap<String, Object>();
+
+        //边界条件
         if (StringUtils.isBlank(username)) {
             map.put("msgname", "用户名不能为空");
             return map;
