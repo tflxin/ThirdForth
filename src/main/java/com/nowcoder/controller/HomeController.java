@@ -18,6 +18,10 @@ import java.util.List;
 
 /**
  * Created by nowcoder on 2018/7/2.
+ * 首页：读取最新资讯==
+ * 后台要做的：从数据库中查到资讯，返回的是news类，
+ * 根据news类的userId去user表中查发帖人的信息，图片链接等
+ * 每一条news，user信息包括的ViewObject类
  */
 @Controller
 public class HomeController {
@@ -32,7 +36,6 @@ public class HomeController {
 
     private List<ViewObject> getNews(int userId, int offset, int limit) {
         List<News> newsList = newsService.getLatestNews(userId, offset, limit);
-
         List<ViewObject> vos = new ArrayList<>();
         for (News news : newsList) {
             ViewObject vo = new ViewObject();
