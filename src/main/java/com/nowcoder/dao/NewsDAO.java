@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * Created by nowcoder on 2018/7/2.
+ * news表进行sql
  */
 @Mapper
 public interface NewsDAO {
