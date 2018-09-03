@@ -4,6 +4,9 @@ import java.util.Date;
 
 /**
  * Created by nowcoder on 2018/7/3.
+ 登录ticket：用来判断是否登录信息过期了
+ userId id expired status ticket
+
  */
 public class LoginTicket {
     private int id;
