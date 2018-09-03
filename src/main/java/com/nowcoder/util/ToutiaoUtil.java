@@ -9,7 +9,12 @@ import java.util.Map;
 
 /**
  * Created by nowcoder on 2018/7/3.
- 引用的是阿里的一个json串的封装好的工具类
+ 1 获得json串：相当于一种数据格式，类似的有xml：
+ 在填写用户名和密码时候，后端 前端都进行检测合法性
+ 因为很多攻击直接访问的是后台如postman
+ 2 引用的是阿里的一个json串的封装好的工具类：
+ MD5：进行加密处理
+
  */
 public class ToutiaoUtil {
     private static final Logger logger = LoggerFactory.getLogger(ToutiaoUtil.class);
