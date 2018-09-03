@@ -18,10 +18,11 @@ import java.util.List;
 
 /**
  * Created by nowcoder on 2018/7/2.
- * 首页：读取最新资讯==
+ * 首页：读取最新资讯==getNews
  * 后台要做的：从数据库中查到资讯，返回的是news类，
  * 根据news类的userId去user表中查发帖人的信息，图片链接等
  * 每一条news，user信息包括的ViewObject类
+ * userIndex：（获得最新0-10条）
  */
 @Controller
 public class HomeController {
@@ -40,8 +41,9 @@ public class HomeController {
         for (News news : newsList) {
             ViewObject vo = new ViewObject();
             vo.set("news", news);
+            //根据news的userId得到user对象，去Userservice处理业务===得到图片等信息
             vo.set("user", userService.getUser(news.getUserId()));
-            vos.add(vo);
+            vos.add(vo);//添加到视图中
         }
         return vos;
     }
@@ -56,7 +58,7 @@ public class HomeController {
         model.addAttribute("pop", pop);
         return "home";
     }
-
+     //从user表中得到资讯新闻
     @RequestMapping(path = {"/user/{userId}"}, method = {RequestMethod.GET, RequestMethod.POST})
     public String userIndex(Model model, @PathVariable("userId") int userId) {
         model.addAttribute("vos", getNews(userId, 0, 10));
