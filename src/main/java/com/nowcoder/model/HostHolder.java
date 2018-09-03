@@ -4,6 +4,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by nowcoder on 2018/7/3.
+ * z对象的持有者：ThreadLocal:为了每一个对象分配一个副本：保持线程独立，安全性
+ * 操纵user
  */
 @Component
 public class HostHolder {
