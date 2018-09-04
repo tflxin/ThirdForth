@@ -12,6 +12,8 @@ import java.util.Date;
 
 /**
  * Created by nowcoder on 2018/6/26.
+ * package org.slf4j：LoggerFactory：
+ * AOP面向切面：前置后置增强
  */
 @Aspect
 @Component
