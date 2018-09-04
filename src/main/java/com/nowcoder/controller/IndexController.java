@@ -42,7 +42,7 @@ public class IndexController {
                           @RequestParam(value = "key", defaultValue = "nowcoder") String key) {
         return String.format("GID{%s},UID{%d},TYPE{%d},KEY{%s}", groupId, userId, type, key);
     }
-   //咨询
+   //资讯
     @RequestMapping(value = {"/vm"})
     public String news(Model model) {
         model.addAttribute("value1", "vv1");//model是package org.springframework.ui;的函数，负责向model中添加
